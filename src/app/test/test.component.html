@@ -1,0 +1,11 @@
+<section>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <p>
+            <label>Name:</label>
+            <input type="text" formControlName="name" placeholder="Unit Status Name">
+        </p>
+        <p>
+            <button type="submit" [disabled]="!form.valid">Submit</button>
+        </p>
+    </form>
+</section>

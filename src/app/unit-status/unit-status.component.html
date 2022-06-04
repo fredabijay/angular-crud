@@ -1,0 +1,12 @@
+<div [formGroup]="myForm">
+    <ng-container formArrayName="unitStatusArray"> 
+      <ng-container *ngFor="let _ of unitStatusArray.controls; let i = index">
+        <div [formGroupName]="i">
+          <input id="name" formControlName="name" placeholder="Name">
+          <input type="hidden" id="tid" formControlName="tid">
+          <button type="button" (click)="remove(i)">Delete</button>
+        </div>
+      </ng-container>
+      <button type="button" (click)="addStatus()">Add</button>
+    </ng-container>  
+</div>
